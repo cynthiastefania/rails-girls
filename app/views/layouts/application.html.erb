@@ -37,7 +37,13 @@
     </nav>
             </nav>
     <div class="contrainer">
-       <%= yield %>
+      <% if notice %>
+         <p class="alert alert-success"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+         <p class="alert alert-danger"><%= alert %></p>
+      <% end %>
+      <%= yield %>
     </div>
     <footer>
       <di class="contrainer">
